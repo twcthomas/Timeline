@@ -3073,6 +3073,7 @@ if(typeof VMM != 'undefined' && typeof VMM.Util == 'undefined') {
 								_date = VMM.Util.date.get12HRTime(d) + "<br/><small>" + VMM.Util.date.month[d.getMonth()] + " " + d.getDate() + ", " + d.getFullYear() + " </small> ";
 							}
 						} else {
+ return VMM.Util.date.get12HRTime(d);
 							// trace("YEAR MONTH DAY HOUR MINUTE");
 							if (is_abbr){
 								_date = VMM.Util.date.day[d.getDay()] + ", " + VMM.Util.date.month_abbr[d.getMonth()] + " " + d.getDate() + ", " + d.getFullYear() + " at " + VMM.Util.date.get12HRTime(d);
@@ -4630,7 +4631,6 @@ if(typeof VMM != 'undefined' && typeof VMM.Timeline == 'undefined') {
 			}
 			
 			buildDates();
-			
 		};
 		
 		function onDatesProcessed() {
@@ -4927,7 +4927,6 @@ if(typeof VMM != 'undefined' && typeof VMM.Timeline == 'undefined') {
 		
 		// BUILD DATE OBJECTS
 		var buildDates = function() {
-			
 			updateSize();
 			
 			/* CREATE START PAGE IF AVAILABLE
